@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* #region  /**=========== Primary Color =========== */
+  --tw-clr-primary-50: 245, 243, 255;
+  --tw-clr-primary-100: 237, 233, 254;
+  --tw-clr-primary-200: 221, 214, 254;
+  --tw-clr-primary-300: 196, 181, 253;
+  --tw-clr-primary-400: 167, 139, 250;
+  --tw-clr-primary-500: 139, 92, 246;
+  --tw-clr-primary-600: 124, 58, 237;
+  --tw-clr-primary-700: 109, 40, 217;
+  --tw-clr-primary-800: 91, 33, 182;
+  --tw-clr-primary-900: 76, 29, 149;
+  --clr-primary-50: rgb(var(--tw-clr-primary-50)); /* #f5f3ff */
+  --clr-primary-100: rgb(var(--tw-clr-primary-100)); /* #ede9fe */
+  --clr-primary-200: rgb(var(--tw-clr-primary-200)); /* #ddd6fe */
+  --clr-primary-300: rgb(var(--tw-clr-primary-300)); /* #c4b5fd */
+  --clr-primary-400: rgb(var(--tw-clr-primary-400)); /* #a78bfa */
+  --clr-primary-500: rgb(var(--tw-clr-primary-500)); /* #8b5cf6 */
+  --clr-primary-600: rgb(var(--tw-clr-primary-600)); /* #7c3aed */
+  --clr-primary-700: rgb(var(--tw-clr-primary-700)); /* #6d28d9 */
+  --clr-primary-800: rgb(var(--tw-clr-primary-800)); /* #5b21b6 */
+  --clr-primary-900: rgb(var(--tw-clr-primary-900)); /* #4c1d95 */
+  /* #endregion  /**======== Primary Color =========== */
+}
+
+@layer base {
+  .cursor-newtab {
+    cursor: url('/images/new-tab.png') 10 10, pointer;
+  }
+
+  /* #region  /**=========== Typography =========== */
+  .h0 {
+    @apply font-bold font-primary text-3xl md:text-5xl;
+  }
+
+  h1,
+  .h1 {
+    @apply font-bold font-primary text-2xl md:text-4xl;
+  }
+
+  h2,
+  .h2 {
+    @apply font-bold font-primary text-xl md:text-3xl;
+  }
+
+  h3,
+  .h3 {
+    @apply font-bold font-primary text-lg md:text-2xl;
+  }
+
+  h4,
+  .h4 {
+    @apply font-bold font-primary text-base md:text-lg;
+  }
+
+  body,
+  .p {
+    @apply font-primary text-sm md:text-base;
+  }
+  /* #endregion  /**======== Typography =========== */
+
+  .layout {
+    /* 1100px */
+    max-width: 68.75rem;
+    @apply mx-auto w-11/12;
+  }
+
+  .bg-dark a.custom-link {
+    @apply border-gray-200 hover:border-gray-200/0;
+  }
+
+  /* Class to adjust with sticky footer */
+  .min-h-main {
+    @apply min-h-[calc(100vh-64px)];
+  }
+}
+
+@layer utilities {
+  .animated-underline {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(to right, var(--clr-primary-400), var(--clr-primary-500));
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .animated-underline {
+      transition: 0.3s ease;
+      transition-property: background-size, color, background-color,
+        border-color;
+    }
+  }
+  .animated-underline:hover,
+  .animated-underline:focus-visible {
+    background-size: 0 2px, 100% 2px;
+  }
+}
+
+/* #region  /**=========== Custom Scrollbar =========== */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-track {
+  background-color: #ffffffs;
+}
+::-webkit-scrollbar-thumb {
+  background: #8b5cf6;
+  opacity: 0.5;
+  border-radius: 4px;
+}
+/* #endregion  /**======== Custom Scrollbar =========== */

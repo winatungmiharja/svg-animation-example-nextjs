@@ -12,15 +12,15 @@ export default function HomePage() {
       <Seo />
 
       <main>
-        <section className='bg-center bg-cover bg-gradient py-8'>
+        <section className='bg-gradient py-8 bg-center bg-cover lg:bg-center'>
           <Header />
-          <div className='flex flex-wrap layout min-h-[calc(100vh-64px-64px)]'>
-            <div className='flex flex-col gap-8 justify-center w-5/12'>
-              <h1 className='font-black text-6xl'>
+          <div className='layout min-h-[calc(100vh-64px-64px)] flex flex-col-reverse flex-wrap lg:flex-row'>
+            <div className='flex flex-col gap-8 justify-center w-full lg:w-5/12'>
+              <h1 className='text-6xl font-black'>
                 UI / UX <br />
                 Design
               </h1>
-              <p>
+              <p className='max-w-[75%] lg:max-w-full'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Pellentesque suscipit tellus vitae purus dignissim, nec
                 tincidunt neque condimentum.
@@ -29,7 +29,7 @@ export default function HomePage() {
                 <Button>Learn More</Button>
               </div>
             </div>
-            <div className='bg-cover w-7/12'>
+            <div className='flex items-center w-full bg-cover lg:w-7/12'>
               <img src='/images/group_img.svg' alt='' className='w-full' />
             </div>
           </div>

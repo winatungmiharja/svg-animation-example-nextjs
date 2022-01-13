@@ -34,11 +34,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'font-extrabold font-fivo text-xl',
+          'font-fivo text-xl font-extrabold',
           'inline-flex items-center px-8 py-3 rounded-full',
           'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'shadow-sm',
-          'duration-150 ease-in-out transition-all',
+          'transition-all duration-150 ease-in-out',
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
@@ -61,7 +61,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {isLoading && (
           <div
             className={clsxm(
-              '-translate-x-1/2 -translate-y-1/2 absolute left-1/2 top-1/2',
+              'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
               {
                 'text-white': ['primary', 'dark'].includes(variant),
                 'text-black': ['light'].includes(variant),
